@@ -22,7 +22,7 @@ body{
     padding: 10px 10%;
 }
 #logo{
-    width: 200px;
+    width: 150px;
     margin: 10px 0 0 1px;
 }
 nav{
@@ -70,7 +70,7 @@ nav ul li a:hover::after{
 }
  /*----------About-----------*/
  #about{
-    padding: 80px 0;
+    padding: 100px 0;
     color: #645151;
  }
  .row{
@@ -82,25 +82,36 @@ nav ul li a:hover::after{
     flex-basis: 35%;
     min-width: 280px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
 }
-.about-col-1 img {
-    width: 100%;
+.about-col-1 img{
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 .about-col-2{
     flex-basis: 60%;
+    padding-left: 40px;
+}
+.about-col-2 p{
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 700px;
 }
 .sub-title{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color: #645151;
+    margin-bottom: 15px;
 }
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    gap: 35px;
+    margin: 20px 0 25px;
 }
 .tab-links{
     margin-right: 50px;
@@ -133,6 +144,12 @@ nav ul li a:hover::after{
 }
 .tab-contents{
     display: none;
+    max-width: 650px;
+}
+
+.tab-contents p{
+    line-height: 1.6;
+    color: #555;
 }
 .tab-contents.active-tab{
     display: block;

@@ -41,12 +41,8 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        Backend Developer specializing in Java and Spring Boot with hands-on experience in building
-                        RESTful APIs, authentication systems, and real-world backend services. Experienced in working
-                        with databases, API integration, and Firebase Cloud Messaging. Skilled in deploying and managing
-                        applications on Apache Tomcat servers in Ubuntu production environments. Passionate about
-                        writing clean, maintainable code and continuously improving backend performance and system
-                        design.
+                       Backend Developer specializing in Java and Spring Boot with hands-on experience in building RESTful APIs, authentication systems, and scalable backend applications. I have worked on real-world projects involving database design, API integration, and Firebase Cloud Messaging, focusing on performance, security, and maintainability. I am experienced in deploying and managing applications on Ubuntu servers using Apache Tomcat, and handling production-level backend services. I enjoy solving complex backend problems, writing clean and efficient code, and continuously improving system design and application performance. Currently, I am focused on strengthening my backend architecture skills and building reliable, user-centered systems.
+                    </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -251,9 +247,9 @@
                     <div class="contact-right">
                         <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
+                            <button type="submit" class="btn btn2" id="submitBtn">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -293,6 +289,40 @@
                 .then(response => response.json())
                 .then(response => console.log('Success!', response))
                 .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        const submitBtn = document.getElementById("submitBtn")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            submitBtn.disabled = true
+            submitBtn.innerHTML = "Sending..."
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    submitBtn.innerHTML = "✓ Sent"
+
+                    form.reset()
+
+                    setTimeout(() => {
+                        submitBtn.disabled = false
+                        submitBtn.innerHTML = "Send Message"
+                    }, 3000)
+
+                })
+                .catch(error => {
+
+                    submitBtn.disabled = false
+                    submitBtn.innerHTML = "Try Again"
+
+                })
         })
     </script>
 </body>
