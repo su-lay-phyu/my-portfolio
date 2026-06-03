@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/734859c94e.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -18,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" id="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Backend Developer</p>
@@ -54,24 +53,74 @@
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Java</span></li>
-                            <li><span>Spring Boot</span></li>
-                            <li><span>MySQL</span></li>
-                            <li><span>REST API</span></li>
-                            <li><span>Git, Postman, Swagger</span></li>
-                            <li><span>Firebase Cloud Messaging</span></li>
-                        </ul>
+
+                        <div class="skill-group">
+                            <h3>Backend Development</h3>
+                            <p>Java, Spring Boot, REST API, Spring Security</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <h3>Database</h3>
+                            <p>MySQL, JPA, Hibernate, Query Optimization</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <h3>Tools & DevOps</h3>
+                            <p>Git, Postman, Swagger, Linux (Ubuntu), Tomcat</p>
+                        </div>
+
+                        <div class="skill-group">
+                            <h3>Cloud & Messaging</h3>
+                            <p>Firebase Cloud Messaging, API Integration</p>
+                        </div>
+
                     </div>
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023 - Current</span>Java Developer at Digital Base</span></li>
-                        </ul>
+
+                        <div class="exp-item">
+                            <h3>Backend Java Developer</h3>
+                            <span>Digital Base | 2023 – Present</span>
+                            <p>
+                                Design and develop backend services and REST APIs using Spring Boot for client-facing
+                                applications.
+                                Optimize database operations and collaborate with cross-functional teams to deliver
+                                scalable enterprise solutions.
+                            </p>
+                        </div>
+
+                        <div class="exp-item">
+                            <h3>Java Developer Intern → Junior Java Developer</h3>
+                            <span>Nexcode | 2023</span>
+                            <p>
+                                Earned internship placement after successfully completing a Java Full-Stack
+                                certification and technical assessment project.
+                                Contributed to in-house product development and was promoted to a full-time role based
+                                on performance and project contributions.
+                            </p>
+                        </div>
+
                     </div>
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Java Developer</span>Java Developer at Digital Base</span></li>
-                        </ul>
+
+                        <div class="edu-item">
+                            <h3>University of Computer Studies Mandalay (UCSM)</h3>
+                            <span>2018 – 2020</span>
+                            <p>
+                                undergraduate student of UCSM 2nd Year
+                                Relevant coursework: Data Structures, Algorithms, Database Systems, Software
+                                Engineering, Object-Oriented Programming.
+                            </p>
+                        </div>
+                        <div class="edu-item">
+                            <h3>Java Full-Stack Development Certification</h3>
+                            <span>2020 – 2023</span>
+                            <p>
+                                Completed intensive training in JSE, MySQL, REST APIs, Git, and software
+                                development best practices.
+                                Built and presented a final project demonstrating full-stack application development
+                                skills.
+                            </p>
+                        </div>
                     </div>
                     </p>
                 </div>
@@ -204,6 +253,15 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
         }
     </script>
 </body>

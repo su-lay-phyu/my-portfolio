@@ -77,11 +77,14 @@ nav ul li a:hover::after{
  }
 .about-col-1{
     flex-basis: 35%;
+    min-width: 280px;
     display: flex;
     justify-content: left;
 }
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
 }
 .about-col-2{
@@ -108,7 +111,7 @@ nav ul li a:hover::after{
     width: 0;
     height: 3px;
     background: #f279a1;
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
@@ -130,6 +133,46 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display: block;
+}
+/* -------------skills, experience and education----------------- */
+.skill-group {
+    margin-bottom: 20px;
+}
+
+.skill-group h3 {
+    color: #f279a1;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.skill-group p {
+    color: #645151;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.exp-item, .edu-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #f279a1;
+}
+
+.exp-item h3, .edu-item h3 {
+    font-size: 18px;
+    color: #4b3832;
+    margin-bottom: 5px;
+}
+
+.exp-item span, .edu-item span {
+    font-size: 14px;
+    color: #f279a1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.exp-item p, .edu-item p {
+    font-size: 14px;
+    color: #645151;
+    line-height: 1.6;
 }
 
 /* ----------services------------- */
@@ -175,7 +218,7 @@ nav ul li a:hover::after{
 }
 
 /* -----------portfolio----------------- */
-#profolio{
+#protfolio{
     padding: 50px 0;
 
 }
@@ -312,9 +355,75 @@ form .btn2{
     cursor: pointer;
 }
 /* -------------------css for small screens------------------------- */
+nav i {
+    display: none !important;
+}
 @media only screen and (max-width:600px)
 {
     #header{
         background-image: url(images/phone_background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav i {
+        display: block !important; 
+        font-size: 25px;
+        color:#4b3832;
+    }
+    nav ul {
+        background: #fff4e6;
+        position:fixed;
+        top: 0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul i{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size:16px;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 20px;
     }
 }
