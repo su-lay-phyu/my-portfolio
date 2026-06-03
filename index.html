@@ -16,11 +16,11 @@
             <nav>
                 <img src="images/logo.png" id="logo">
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-x" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -106,7 +106,7 @@
                             <h3>University of Computer Studies Mandalay (UCSM)</h3>
                             <span>2018 – 2020</span>
                             <p>
-                                undergraduate student of UCSM 2nd Year
+                                2nd Year undergraduate student of UCSM
                                 Relevant coursework: Data Structures, Algorithms, Database Systems, Software
                                 Engineering, Object-Oriented Programming.
                             </p>
@@ -156,14 +156,6 @@
                         JPA/Hibernate.</p>
                     <a href="#">learn more</a>
                 </div>
-
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Authentication & Security</h2>
-                    <p>Implement secure authentication and authorization systems using Spring Security and JWT.</p>
-                    <a href="#">learn more</a>
-                </div>
-
                 <div>
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                     <h2>Deployment & Server Management</h2>
@@ -177,38 +169,64 @@
     </div>
 
     <!-- ----------------protfolio---------------------- -->
-    <div id="protfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
+
             <div class="work-list">
+
+                <!-- Project 1 -->
                 <div class="work">
-                    <img src="images/work1.png">
+                    <img src="images/1.png">
                     <div class="layer">
                         <h3>Sarphat Web/App</h3>
-                        <p>This is a popular localized reading and writing platform in Myanmar designed to help young
-                            people access high-quality content for personal and professional development.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>
+                            A digital reading and writing platform designed for Myanmar users to access educational and
+                            inspirational content. I contributed to backend API development, content delivery system,
+                            and performance optimization.
+                        </p>
+                        <p><b>Tech:</b> Java, Spring Boot, REST API, MySQL</p>
+                        <a href="https://apps.apple.com/mm/app/sarphat/id6448984171">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Project 2 -->
                 <div class="work">
-                    <img src="images/work2.png">
+                    <img src="images/2.png">
                     <div class="layer">
                         <h3>Panora Web/App</h3>
-                        <p>Panora is a popular local online bookstore. You can download the app on Google Play or the
-                            App Store to buy books with cash-on-delivery (COD) anywhere in the country.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>
+                            An online bookstore platform supporting nationwide book purchasing with cash-on-delivery.
+                            Focused on backend integration for product management, order processing, and user
+                            experience.
+                        </p>
+                        <p><b>Tech:</b> Java, Spring Boot, MySQL, Payment Integration</p>
+                        <a href="https://apps.apple.com/mm/app/panora-online-bookstore/id6449066307">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Project 3 -->
                 <div class="work">
-                    <img src="images/work3.png">
+                    <img src="images/3.png">
                     <div class="layer">
                         <h3>Dhamma Aung Lan Web/App</h3>
-                        <p>This is a popular localized reading and writing platform in Myanmar designed to help young
-                            people access high-quality content for personal and professional development.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>
+                            A meditation and spiritual content platform aimed at helping users access Dhamma teachings.
+                            Worked on API integration, backend logic, and system stability improvements.
+                        </p>
+                        <p><b>Tech:</b> Java, Spring Boot, Firebase, REST API</p>
+                        <a href="https://apps.apple.com/mm/app/dhamma-aung-lan-yeiktha/id6756059615">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
+
             <a href="#" class="btn">See more</a>
         </div>
     </div>
@@ -222,15 +240,16 @@
                         <p><i class="fa-solid fa-paper-plane"></i>sulayphyu6619@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i>+959978714878</p>
                         <div class="social-icons">
-                            <a href=""><i class="fa-brands fa-facebook"></i></a>
-                            <a href=""><i class="fa-solid fa-envelope"></i></a>
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/share/18sBFR4zeX/?mibextid=wwXIfr"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/su-lay-phyu-java/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/su-lay-phyu"><i class="fa-brands fa-github"></i></a>
                         </div>
                         <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -263,6 +282,18 @@
         function closemenu() {
             sidemenu.style.right = "-200px";
         }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzajcwipmoo8sV0qmGNQOKK4n2Vo8c5L6xaiuYcTsYr0FGQAIgbBOPUN1H-PeypJpQL/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => response.json())
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
